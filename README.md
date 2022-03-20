@@ -5,7 +5,7 @@ This is a Python GUI (using Tkinter) that displays the formulas and makes polar 
 for l and m. Note: this also plots and gives the equations for the regular Legendre Polynomials if the user sets m=0.
   Often times in Physics and Engineering, especially when solving the Laplace equation in spherical coordinates, or solving the Schrodinger equation for 
 the Hydrogen atom, the Legendre polynomials and/or the Associated Legendre Polynomials are introduced. Initially, these functions seem very complex 
-and foreign. Other transcendental functions such as sine and cosine were also once this way to any Physicist or Engineer, and with time, these functions
+and foreign. Other functions such as sine and cosine were also once this way to any Physicist or Engineer, and with time, these functions
 become familiar. 
   I intended to make the plots and equations of these formulas easily accessible with this Python script. Instead of looking in a table for these equations
 or finding these functions through the Rodrigues formulas, this GUI provides a simple alternative. Additionally, no predefined functions were used in this
