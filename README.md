@@ -1,5 +1,5 @@
 # Assoc.-Legendre-polynomials
-*****The user must have Sympy, Matplotlib, and numpy installed to use this
+*****The user must have Tkinter, Sympy, Matplotlib, and numpy installed to use this
 
 This is a Python GUI (using Tkinter) that displays the formulas and makes polar plots of the Associated Legendre Polynomials based off the user inputs 
 for l and m. Note: this also plots and gives the equations for the regular Legendre Polynomials if the user sets m=0.
