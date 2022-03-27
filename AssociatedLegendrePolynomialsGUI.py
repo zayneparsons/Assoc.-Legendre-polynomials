@@ -3,10 +3,12 @@ Created on Mar 9, 2022
 
 @author: zayneparsons
 '''
+
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_tkagg import (FigureCanvasTkAgg, NavigationToolbar2Tk)
 from matplotlib.backend_bases import key_press_handler
 from matplotlib import cm
+from matplotlib import colors
 from matplotlib.collections import LineCollection
 import math
 import sympy as sp
@@ -125,7 +127,7 @@ def reg():
             X[i]=U+i*o
             if abs(m)<=l:
                 p[i]=((2*l+1)/(2)*FAC(l-m)/FAC(l+m))**(1/2)*abs(AssLeg(math.cos(X[i]), math.sin(X[i]), l, m))
-                Colors[i]=np.sign(AssLeg(math.cos(X[i]), math.sin(X[i]), l, m))  
+                Colors[i]=np.sign(AssLeg(math.cos(X[i]), math.sin(X[i]), l, m)) 
             else:
                 p[i]=None
         segmentsl= []
@@ -134,7 +136,7 @@ def reg():
         segments=np.array(segmentsl)
         if abs(m)<=l:
             axis.cla()       #clearing previous plot
-            lc = LineCollection(segments, cmap='coolwarm',array=Colors,linewidth=3)  #creating a set of color coordinated line segments according to the sign of the polynomials
+            lc = LineCollection(segments, norm=colors.CenteredNorm(), cmap='jet',array=Colors,linewidth=2)  #creating a set of color coordinated line segments according to the sign of the polynomials
 #i.e. if the polynomial is negative, the plot will appear blue. If the absolute value were not plotted, the plot would trace over the same graph twice...
             axis.add_collection(lc)
             O=max(p)                                 #Updating the plot
